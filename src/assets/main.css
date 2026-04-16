@@ -1,0 +1,14 @@
+:root{
+    --black:hsl(0, 0%, 0%);
+    --black-2: #111;
+    --gray:#222;
+    --onyx: hsl(240, 1%, 17%);
+}
+body{
+    background-color: var(--black);
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
