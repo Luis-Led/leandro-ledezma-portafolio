@@ -45,6 +45,7 @@ import { useRouter } from "vue-router";
 }
 .sidebar-area{
     grid-area: aside;
+    
 }
 .main-area{
     grid-area: main;    
@@ -80,6 +81,21 @@ import { useRouter } from "vue-router";
       margin: 0 0 20px 0;
     }
     
+}
+@media (max-width:992px){
+    .container{
+        grid-template-areas:
+        "aside"
+        "main";
+        grid-template-columns: 1fr;
+        grid-template-rows: 2fr;
+        
+        margin: 0 auto;
+    }
+    .sidebar-area{
+      position: relative;
+      margin: 0 0 20px 0;
+    }
 }
 
 

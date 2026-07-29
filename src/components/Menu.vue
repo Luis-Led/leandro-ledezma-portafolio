@@ -67,4 +67,27 @@ a:hover{
     }
 }
 
+@media (max-width: 992px) {
+    nav {
+        
+        border-radius: 20px 20px 0 0;
+        /* position: static; */
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        top: auto;
+        display: flex;
+        justify-content: space-around;
+    }
+    ul {
+        width: 100%;
+        justify-content: space-around;
+        padding: 10px;
+        gap: 0;
+    }
+    .main-content {
+    padding-bottom: 20px;
+    }
+}
+
 </style>

@@ -1,6 +1,6 @@
 <template>
-  <section class="content text-white py-5">
-        <h2 class="mb-4">Resume</h2>
+  <section class="content text-white py-5 px-5">
+        <h1 class="mb-4">Resume</h1>
 
         <ul class="list-unstyled mt-4 text-start timeline ">
           <li class="d-flex wrap align-items-center">
