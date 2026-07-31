@@ -1,5 +1,10 @@
 <script setup>
 import { ref, computed } from "vue";
+import sisVenta from "./../images/LocalStorage.png";
+import rickMorty from "./../images/rick&morty_react.png";
+import pokedex from "./../images/pokeapi.png";
+import dragonBall from "./../images/Dragonball.png";
+
 const categoriaSelecionada = ref('All');
 const categorias = ref(['All', 'APIs', 'HTML', 'Full-Stack']);
 
@@ -8,30 +13,47 @@ const proyectos = [
         id: 1,
         nombre: "Rick & Morty",
         categoria: "APIs",
+        framework:"React",
+        image:rickMorty,
+        link:"https://luis-led.github.io/rick-and-morty-react/"
     },
     {
         id: 2,
         nombre: "Pokedex",
+        framework:"Vue",
         categoria: "APIs",
+        image:pokedex,
+        link:"https://luis-led.github.io/Poke_API/#/"
     },
     {
         id: 3,
+        nombre: "Dragon Ball",
+        categoria: "APIs",
+        framework:"React",
+        image:dragonBall,
+        link:"https://luis-led.github.io/dragon-ball-react/"
+    },
+    {
+        id: 4,
         nombre: "Landing Page",
         categoria: "HTML",
     },
     {
-        id: 4,
+        id: 5,
         nombre: "Sistema de ventas",
         categoria: "Full-Stack",
+        image:sisVenta,
+        link:"https://luis-led.github.io/H-compa-venta/login.html"
+
     },
 ];
 const proyectosFiltrados = computed(() => {
-        if(categoriaSelecionada.value === 'All') {
-            return proyectos;
-        }
-        return proyectos.filter(
-            proyecto => proyecto.categoria === categoriaSelecionada.value
-        );
+    if (categoriaSelecionada.value === 'All') {
+        return proyectos;
+    }
+    return proyectos.filter(
+        proyecto => proyecto.categoria === categoriaSelecionada.value
+    );
 });
 </script>
 
@@ -61,7 +83,9 @@ const proyectosFiltrados = computed(() => {
                             </li> -->
 
                             <li v-for="categoria in categorias" :key="categoria">
-                                <a class="text-decoration-none text-light" :class="{ activo: categoriaSelecionada===categoria}" @click="categoriaSelecionada = categoria">
+                                <a class="text-decoration-none text-light"
+                                    :class="{ activo: categoriaSelecionada === categoria }"
+                                    @click="categoriaSelecionada = categoria">
                                     {{ categoria }}
                                 </a>
                             </li>
@@ -72,7 +96,8 @@ const proyectosFiltrados = computed(() => {
                         <div class="col-md-4 mb-3" v-for="proyecto in proyectosFiltrados" :key="proyecto.id">
                             <div class="card p-3">
                                 <h4>{{ proyecto.nombre }}</h4>
-                                <p>{{ proyecto.categoria }}</p>
+                                <p>{{ proyecto.categoria }} - {{ proyecto.framework }}</p>
+                                <a :href="proyecto.link" target="_blank" rel="noopener noreferrer"><img :src="proyecto.image" alt="" class="img-fluid"></a>
                             </div>
                         </div>
                     </div>
