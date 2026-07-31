@@ -1,7 +1,7 @@
 <script setup>
 import { ref, computed } from "vue";
 import sisVenta from "./../images/LocalStorage.png";
-import rickMorty from "./../images/rick&morty_react.png";
+import rickMorty from "./../images/rick&morty.png";
 import pokedex from "./../images/pokeapi.png";
 import dragonBall from "./../images/Dragonball.png";
 
