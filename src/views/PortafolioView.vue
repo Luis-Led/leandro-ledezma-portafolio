@@ -1,9 +1,9 @@
 <script setup>
 import { ref, computed } from "vue";
-import sisVenta from "./../images/LocalStorage.png";
-import rickMorty from "./../images/rick&morty.png";
+import sisVenta from "./../images/1735842047049.jpeg";
+import rickMorty from "./../images/rick-morty.png";
 import pokedex from "./../images/pokeapi.png";
-import dragonBall from "./../images/Dragonball.png";
+import dragonBall from "./../images/dragonball.png";
 
 const categoriaSelecionada = ref('All');
 const categorias = ref(['All', 'APIs', 'HTML', 'Full-Stack']);
