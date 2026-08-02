@@ -4,6 +4,7 @@ import sisVenta from "./../images/localstorage.png";
 import rickMorty from "./../images/rick-morty.png";
 import pokedex from "./../images/pokeapi.png";
 import dragonBall from "./../images/dragonball.png";
+import lucifer from "./../images/lucifer.png";
 
 const categoriaSelecionada = ref('All');
 const categorias = ref(['All', 'APIs', 'HTML', 'Full-Stack']);
@@ -37,11 +38,15 @@ const proyectos = [
         id: 4,
         nombre: "Landing Page",
         categoria: "HTML",
+        framework:"CSS",
+        link:"https://luis-led.github.io/Netflix/",
+        image:lucifer
     },
     {
         id: 5,
         nombre: "Sistema de ventas",
         categoria: "Full-Stack",
+        framework:"JS,  HTML, CSS",
         image:sisVenta,
         link:"https://luis-led.github.io/H-compa-venta/login.html"
 
