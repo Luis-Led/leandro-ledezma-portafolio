@@ -44,7 +44,7 @@ const proyectos = [
     },
     {
         id: 5,
-        nombre: "Sistema de ventas",
+        nombre: "Sistema de ventas Demo",
         categoria: "Full-Stack",
         framework:"JS,  HTML, CSS",
         image:sisVenta,
